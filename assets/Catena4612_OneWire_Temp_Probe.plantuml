@@ -1,0 +1,18 @@
+@startuml
+
+partition "**Catena4612 with Onewire Temperature Probe (Simple Flow)**" {
+
+start
+
+: Initialize the board 4612 and its peripherals and on-board sensors;
+: Initialize the radio module (LoRaWAN/Sigfox);
+: Initialize the onewire temperature probe;
+repeat: Read the measurements from on-board and onewire sensors;
+    : Transmit the data over network in desired order;
+    : Turn OFF the peripherals;
+
+backward: Wake-Up the peripherals;
+repeat while (Sleep for 8 hours)
+}
+
+@enduml
