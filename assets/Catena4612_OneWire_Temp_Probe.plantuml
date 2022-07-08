@@ -1,6 +1,32 @@
+/'
+Module:	Catena4612_OneWire_Temp_Probe.plantuml
+
+Function:
+        PlantUML flow chart for Catena4612 OneWire Temperature Probe.
+
+Copyright:
+        This file copyright (C) 2022 by
+        MCCI Corporation
+        3520 Krums Corners Road
+        Ithaca, NY 14850
+        An unpublished work. All rights reserved.
+        This file is proprietary information, and may not be disclosedg or
+        copied without the prior permission of MCCI Corporation.
+
+Author:
+        Pranau R, MCCI Corporation    July 2022
+'/
+
 @startuml
 
-partition "**Catena4612 with Onewire Temperature Probe (Simple Flow)**" {
+<style>
+title {
+    HorizontalAlignment center
+    FontSize 20
+}
+</style>
+
+title Catena4612 with Onewire Temperature Probe (Simple Flow)
 
 start
 
@@ -13,6 +39,5 @@ repeat: Read the measurements from on-board and onewire sensors;
 
 backward: Wake-Up the peripherals;
 repeat while (Sleep for 8 hours)
-}
 
 @enduml
